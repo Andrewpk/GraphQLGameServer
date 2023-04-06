@@ -1,0 +1,7 @@
+query GetHighScores {
+  flappy_high_score(order_by: {score: desc}) {
+    created_at
+    name
+    score
+  }
+}
