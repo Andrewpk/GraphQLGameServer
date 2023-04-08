@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameServer", "GameServer\GameServer.csproj", "{3CA0FA8B-92F2-4A3E-9A3A-624F0DFD784B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{887B54C5-5F9D-414E-9891-D894D0D2AD50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{3CA0FA8B-92F2-4A3E-9A3A-624F0DFD784B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CA0FA8B-92F2-4A3E-9A3A-624F0DFD784B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CA0FA8B-92F2-4A3E-9A3A-624F0DFD784B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{887B54C5-5F9D-414E-9891-D894D0D2AD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{887B54C5-5F9D-414E-9891-D894D0D2AD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{887B54C5-5F9D-414E-9891-D894D0D2AD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{887B54C5-5F9D-414E-9891-D894D0D2AD50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

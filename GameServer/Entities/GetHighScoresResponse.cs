@@ -10,19 +10,17 @@ public class GetHighScoresResponse : BaseResponse<List<HighScore>>
         : base(PrepareResponse(operationResult, out var errorMessage), errorMessage)
     {
         _logger = logger;
-        
-        if (!String.IsNullOrWhiteSpace(errorMessage))
-        {
-            _logger?.LogError(errorMessage);
-            ErrorMessage = "We're sorry, there seems to be a problem. Please try again.";
-        }
+
+        if (string.IsNullOrWhiteSpace(errorMessage)) return;
+        _logger?.LogError(errorMessage);
+        ErrorMessage = "We're sorry, there seems to be a problem. Please try again.";
     }
 
-    private static List<HighScore>? PrepareResponse(IOperationResult<IGetHighScoresResult> operationResult, out String? errorMessage)
+    private static List<HighScore>? PrepareResponse(IOperationResult<IGetHighScoresResult>? operationResult, out string? errorMessage)
     {
-        var responseData = operationResult.Data?.Flappy_high_score.ToList().ConvertAll(HighScore.From);
+        var responseData = operationResult?.Data?.Flappy_high_score.ToList().ConvertAll(HighScore.From);
         errorMessage = null;
-        if (operationResult.Errors.Count > 0)
+        if (operationResult is {Errors.Count: > 0})
         {
             errorMessage = operationResult.Errors.First().Message;
         }
