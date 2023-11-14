@@ -1,4 +1,7 @@
 // ReSharper disable UnusedAutoPropertyAccessor.Global
+
+using GameServer.GraphQL;
+
 namespace GameServer.Entities;
 
 public class HighScore
@@ -10,7 +13,7 @@ public class HighScore
     
     public static HighScore From(IGetHighScores_Flappy_high_score highScore)
     {
-        return new HighScore(DateTimeOffset.Parse(highScore.Created_at), highScore.Name, highScore.Score);
+        return new(DateTimeOffset.Parse(highScore.Created_at), highScore.Name, highScore.Score);
     }
     public HighScore(DateTimeOffset created, string name, int score)
     {

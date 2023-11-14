@@ -7,7 +7,7 @@ public abstract class BaseResponse<T>
     // ReSharper disable once UnusedAutoPropertyAccessor.Global
     public string? ErrorMessage { get; set; }
 
-    public BaseResponse(T? responseData = default, string? errorMessage = null)
+    protected BaseResponse(T? responseData = default, string? errorMessage = null)
     {
         if (responseData == null && errorMessage == null)
         {

@@ -1,4 +1,5 @@
 using GameServer.Entities;
+using GameServer.GraphQL;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GameServer.Controllers;
@@ -10,13 +11,11 @@ public class HighScoreController : ControllerBase
 {
     
     private readonly IHasuraClient _client;
-    private readonly ILogger<HighScoreController> _logger;
     private readonly ILoggerFactory _loggerFactory;
 
-    public HighScoreController(IHasuraClient client, ILogger<HighScoreController> logger, ILoggerFactory loggerFactory)
+    public HighScoreController(IHasuraClient client, ILoggerFactory loggerFactory)
     {
         _client = client;
-        _logger = logger;
         _loggerFactory = loggerFactory;
     }
 
